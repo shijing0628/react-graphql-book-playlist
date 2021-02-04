@@ -1,11 +1,27 @@
 const express = require('express')
 const app = express()
 const { graphqlHTTP } = require('express-graphql')
+const schema = require('./schema/schema')
+const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+dotenv.config()
 
 //middleware
 app.use(express.json());
 
+//connect mongoose
+mongoose.connect(`mongodb+srv://root:${process.env.MONGODB_PASSWORD}@cluster0.rxgaf.mongodb.net/graphQL-playlist`, {
+ useUnifiedTopology: true,
+ useNewUrlParser: true
+})
+
+mongoose.connection.once('open', () => {
+ console.log('connect to mongodb database..')
+})
+
 app.use('/graphql', graphqlHTTP({
+ schema,
+ graphiql: true
 
 }))
 
