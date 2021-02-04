@@ -6,6 +6,11 @@
 npm run dev
 ```
 
+PORT = 4000
+
+to open grapiql window:
+URL: localhost:4000/graphql
+
 **Backend:graphql+mongoDB**
 
 - npm lodash for loop an array
