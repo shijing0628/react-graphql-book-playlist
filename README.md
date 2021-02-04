@@ -10,3 +10,5 @@ npm run dev
 
 - npm lodash for loop an array
 - relationship of types
+
+![](2021-02-04-11-21-16.png)
