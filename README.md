@@ -1,5 +1,7 @@
 ### React-graphql-book-list Server side
 
+frontend repo: react-graphql-book-playlist-frontend
+
 2021-2-4
 
 ```

@@ -4,10 +4,13 @@ const { graphqlHTTP } = require('express-graphql')
 const schema = require('./schema/schema')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
+const cors = require('cors')
 dotenv.config()
 
 //middleware
 app.use(express.json());
+app.use(cors())
+
 
 //connect mongoose
 mongoose.connect(`mongodb+srv://root:${process.env.MONGODB_PASSWORD}@cluster0.rxgaf.mongodb.net/graphQL-playlist`, {
