@@ -19,3 +19,6 @@ URL: localhost:4000/graphql
 - relationship of types
 
 ![](2021-02-04-11-21-16.png)
+<br>
+
+![](2021-02-06-17-11-28.png)
